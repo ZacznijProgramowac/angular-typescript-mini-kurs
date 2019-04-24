@@ -1,6 +1,10 @@
-// Import stylesheets
-import './style.css';
 
 
-const appDiv: HTMLElement = document.getElementById('app');
-appDiv.innerHTML = `<h1>TypeScript Starter</h1>`;
+
+function print(...text) {
+  const appDiv = document.getElementById('app');
+  const header = document.createElement('h2');
+  header.innerText = text.join(' ')
+  appDiv.appendChild(header);
+}
+export default print;
