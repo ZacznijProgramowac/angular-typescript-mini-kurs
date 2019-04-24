@@ -1,6 +1,6 @@
 import print from './index';
 
-export function types() {
+export default function types() {
 
   // boolean
   let isClose: boolean = false;
