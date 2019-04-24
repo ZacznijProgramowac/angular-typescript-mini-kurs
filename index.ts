@@ -1,11 +1,6 @@
-
-
-
-
-
-
 import types from './1_types';
-
+import variables from './2_variable_declaration';
+import interfaces from './3_interfaces';
 
 function print(...text) {
   const appDiv = document.getElementById('app');
@@ -14,3 +9,7 @@ function print(...text) {
   appDiv.appendChild(header);
 }
 export default print;
+
+//types();
+// variables();
+interfaces();
