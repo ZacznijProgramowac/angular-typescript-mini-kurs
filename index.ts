@@ -1,4 +1,4 @@
-
+import types from './1_types';
 
 
 function print(...text) {
