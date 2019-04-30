@@ -1,5 +1,5 @@
 import types from './1_types';
-
+import variables from './2_variable_declaration';
 
 function print(...text) {
   const appDiv = document.getElementById('app');
@@ -9,4 +9,6 @@ function print(...text) {
 }
 export default print;
 
-types();
+
+// types();
+variables();
