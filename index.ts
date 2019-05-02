@@ -5,7 +5,7 @@ import classes from './4_classes';
 import functions from './5_functions';
 import enums from './6_enums';
 
-// import thisExamples from './8_this';
+import jakasNazw from './7_modules';
 
 function print(...text) {
   const appDiv = document.getElementById('app');
@@ -22,4 +22,6 @@ export default print;
 // classes();
 // functions();
 // enums();
-// thisExamples();
+
+// print(message)
+
