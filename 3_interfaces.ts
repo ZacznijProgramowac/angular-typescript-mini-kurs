@@ -1,38 +1,39 @@
 import print from './index'
 
 export default function interfaces() {
+
+  let name: string = 'Reksio';
+  let age: number = 10;
+
   interface Animal {
     name: string,
     age: number,
-    readonly type: string,
-    owner?: string,
+    readonly owner: string,
   }
-  // inicjalizacja obiektu typu Animal
-  const a: Animal = { name: 'Reksio', age: 8, type: 'Dog' }
 
-  // metoda wykorzystująca obiekt animal
-  function printAnimal(a: Animal) {
-    print(a.name)
-    print(a.age)
-    print(a.type)
-  }
-  printAnimal(a)
+  const dog: Animal = {name: 'Reksio', age: 10, owner: 'Ktoś'};
+  dog.age = 12;
 
-// najczęściej interfejsy będziemy wykorzystywać to reprezentacji jsonów, 
-// można je bezproblemu zmapować
-  const x = {
-    "name": "Opel",
-    "model": "Corsa",
-    "color": 'red',
+  function printAnimal(a: Animal){
+    print(a.name);
+    print(a.age);
   }
+  printAnimal(dog);
+
+  const x ={
+    'name': 'Opel',
+    'model': 'Corsa'
+  };
+
   interface Car {
     name: string,
     model: string,
-    color: string,
   }
-  function printCar(car: Car) {
-    print(car);
-    console.log(car);
-  }
-  printCar(x as Car);
+   const car: Car = x;
+
+  function printCar(c: Car){
+     print(c.name);
+   }
+   printCar(car)
+
 }
