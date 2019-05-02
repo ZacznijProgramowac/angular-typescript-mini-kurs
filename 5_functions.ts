@@ -1,90 +1,65 @@
 import print from './index';
 
 export default function functions() {
+
   // najprostsza definicja funkcji
-  function printVoid(): void {
-    print('Funkcja printVoid()!');
+  function typVoid(): void {
+    print('Hello');
   }
+  typVoid();
 
   // funkcja z parametrem
-  function printParam(msg: string): void {
-    print('Funkcja paprintParamram(): ' + msg);
+  function typVoidParam(param: string): void {
+    print(param);
   }
-
+  typVoidParam('Hello param');
   // funkcja return
-  function printReturn(msg: string): string {
-    return 'Funkcja printReturn(): ' + msg;
+  function typVoidParamReturn(): string {
+    return 'Hello from func';
   }
+  const msg = typVoidParamReturn();
+  print(msg);
 
   // funckja anonimowa
-  const funcAnonim = function (msg: string): string {
-    return 'Funkcja fucnAnonim(): ' + msg;
+  const anonim = function (): string {
+    return 'Hello from anonim';
   }
-  printVoid();
-  printParam('test');
-  print(printReturn('Wiadomość zwrócona'));
-  print(funcAnonim('Wiadomość zwrócona'));
+  print(anonim())
 
-  /////////////////////////// Arrow functions ////////////////////////////////
-  // zapis arrow
-  const printArrow = (): void => print('Arrow function!');
-  
-  const printArrowParam = (msg: string): void => print('Arrow function z parametrem: ' + msg);
+  // Arrow functions
+  const funcArrow = (): void => print('Func Arrow')
+  funcArrow();
 
-  const printArrowReturn = (msg: string): string => 'Arrow function z return: ' + msg; // nie używamy return
+  const funcArrowParam = (msg: string): void => print(msg)
+  funcArrowParam('Hello param arrow');
 
-  const printArrowReturnBrackets = (msg: string): string => {
-    msg = 'Wiadomość nadpisana';
+  const funcArroReturn = (): string => {
+    const msg = 'Wiadomość';
     return msg;
   }
+  print(funcArroReturn())
 
-  printArrow();
-  printArrowParam('Hello');
-  print(printArrowReturn('Hello'));
-  print(printArrowReturnBrackets('Hello'));
-
-  // parametr opcjonalny
+  ///////////////
 
   function buildName(name: string, surname: string) {
     return 'Nazywam się ' + name + ' ' + surname;
   }
   print(buildName('Jan', 'Kowalski'));
-  // buildName('Jan') - brakuje jednego parametru
 
-  function buildNameOptional(name: string, surname?: string) {
+
+  function buildNameOption(name: string, surname?: string) {
     return 'Nazywam się ' + name + ' ' + surname;
   }
-  print(buildNameOptional('Jan'));
+  print(buildNameOption('Jan'));
 
   function buildNameDefault(name: string, surname = '') {
     return 'Nazywam się ' + name + ' ' + surname;
   }
-  print(buildNameDefault('Jan'));
+  print(buildNameDefault('Jan', 'Kowalski'));
 
-  function myAnimals(...animals: string[]) {
-    return 'Moje zwierzaki to: ' + animals.join(', ');
+  function myAnimals(...animals: string[]): string{
+    return 'Moja zwierzaki to: ' + animals.join(', ');
   }
-  print(myAnimals('Reksio', 'Pluto', 'Łatek'));
+
+  print(myAnimals('Reksio'));
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
