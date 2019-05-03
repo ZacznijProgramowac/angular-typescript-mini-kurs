@@ -1,4 +1,6 @@
-export const message = 'Witaj'; 
-export const messag2 = 'Witaj'; 
+export const message = 'Tutaj message';
+export const message2 = 'Witaj message 2';
 
-export default () => 'Default import';
+
+export default () => 'Hello from function2';
+

@@ -4,8 +4,12 @@ import interfaces from './3_interfaces';
 import classes from './4_classes';
 import functions from './5_functions';
 import enums from './6_enums';
+import thisExamples from './8_this';
 
-import jakasNazw from './7_modules';
+// moduły
+import func, { message, message2 } from './7_modules';
+import * as module from './7_modules';
+
 
 function print(...text) {
   const appDiv = document.getElementById('app');
@@ -15,6 +19,12 @@ function print(...text) {
 }
 export default print;
 
+print('Odkomentuj poszczególne funkcje w pliku index.ts jeśli chesz zobaczyć rezulaty')
+
+// moduły - import / export
+// print(func())
+// print(message);
+// print(message2);
 
 // types();
 // variables();
@@ -22,6 +32,6 @@ export default print;
 // classes();
 // functions();
 // enums();
+// thisExamples();
 
-// print(message)
 
